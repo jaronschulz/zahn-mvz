@@ -1,42 +1,43 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
+// import Img from "gatsby-image"
+import NavMenu from "./nav-menu"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = () => (
+  <HeaderWrapper>
+    <UpperHeader>
+      <Link to="/" className="logo-link">
+        <h1>LOGO</h1>
+      </Link>
+      <h3>
+        Zentrum für die zahnärztliche und kieferchirurgische Behandlung von
+        Menschen mit Behinderung
+      </h3>
+    </UpperHeader>
+    <NavMenu />
+  </HeaderWrapper>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
+
+const HeaderWrapper = styled.header`
+  background: blueviolet;
+  height: 10rem;
+  .logo-link {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: auto 1rem;
+  }
+  h3 {
+    margin: auto 2rem;
+  }
+`
+const UpperHeader = styled.div`
+  background: blanchedalmond;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 7rem;
+`
