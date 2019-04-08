@@ -9,16 +9,18 @@ import React from "react"
 import PropTypes from "prop-types"
 // import { StaticQuery, graphql } from "gatsby"
 
-import styled, {createGlobalStyle} from "styled-components"
+import { createGlobalStyle } from "styled-components"
 import Header from "./header"
 import Footer from "./footer"
+import Main from "./body"
 
 const Layout = ({ children }) => (
-  <GlobalStyle>
+  <>
+    <GlobalStyle />
     <Header />
-    <ContentWrapper>{children}</ContentWrapper>
+    <Main>{children}</Main>
     <Footer />
-  </GlobalStyle>
+  </>
 )
 
 Layout.propTypes = {
@@ -27,10 +29,6 @@ Layout.propTypes = {
 
 export default Layout
 
-const ContentWrapper = styled.main`
-  background: pink;
-  height: 80vh;
-`
 const GlobalStyle = createGlobalStyle`
 *{
   margin: 0;
@@ -42,3 +40,4 @@ body{
   color: #262626;
   background:#fff;
 }
+`

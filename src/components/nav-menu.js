@@ -1,11 +1,25 @@
 import React from "react"
-import { homedir } from "os";
-
-
 const menuItems = [
+
   {
-   name: "home",
-   slag: "/"
+    name: "treatment",
+    slag: "/treatment/",
+  },
+  {
+    name: "team",
+    slag: "/team/",
+  },
+  {
+    name: "treatment",
+    slag: "/treatment/",
+  },
+  {
+    name: "treatment",
+    slag: "/treatment/",
+  },
+  {
+    name: "treatment",
+    slag: "/treatment/",
   },
 ]
 const NavMenu = () => {
