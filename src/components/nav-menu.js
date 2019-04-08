@@ -1,29 +1,60 @@
 import React from "react"
-const menuItems = [
+import { Link } from "gatsby"
 
+const menuItems = [
   {
     name: "treatment",
     slag: "/treatment/",
+    id: 1,
   },
   {
-    name: "team",
+    name: "das team",
     slag: "/team/",
+    id: 2,
   },
   {
-    name: "treatment",
-    slag: "/treatment/",
+    name: "ablauf",
+    slag: "/process/",
+    id: 3,
   },
   {
-    name: "treatment",
-    slag: "/treatment/",
+    name: "dokumente",
+    slag: "/docs/",
+    id: 4,
   },
   {
-    name: "treatment",
-    slag: "/treatment/",
+    name: "anfahrt",
+    slag: "/location/",
+    id: 5,
+  },
+  {
+    name: "kontakt",
+    slag: "/contacts/",
+    id: 6,
+  },
+  {
+    name: "impressum",
+    slag: "/imprint/",
+    id: 7,
+  },
+  {
+    name: "datenschutz",
+    slag: "/data-protection/",
+    id: 8,
   },
 ]
-const NavMenu = () => {
-  return <nav>hello from MENU</nav>
-}
+const NavMenu = () => (
+  <nav>
+    <ul>
+      {menuItems.map(({ name, id, slag }) => (
+        <li>
+          <Link key={id} to={slag}>
+            {name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)
 
 export default NavMenu

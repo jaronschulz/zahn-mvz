@@ -23,7 +23,7 @@ export default Header
 
 const HeaderWrapper = styled.header`
   background: blueviolet;
-  height: 10rem;
+  height: 100%;
   .logo-link {
     text-decoration: none;
     color: black;
