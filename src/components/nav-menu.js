@@ -45,6 +45,9 @@ const menuItems = [
 ]
 const NavMenu = () => (
   <nav>
+    <button>
+      <h1>MENU</h1>
+    </button>
     <ul>
       {menuItems.map(({ name, id, slag }) => (
         <li>
