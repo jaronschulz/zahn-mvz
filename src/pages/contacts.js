@@ -1,9 +1,5 @@
 import React from 'react'
 
 export default () => {
-  return (
-    <div>
-      hello from CONTACTS
-    </div>
-  )
+  return <div>hello from CONTACTS</div>
 }

@@ -5,6 +5,7 @@ module.exports = {
     description: `Zahn- und kieferorthopädisches Versorgungszentrum für Menschen mit Behinderung`,
   },
   plugins: [
+    `gatsby-plugin-playground`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
