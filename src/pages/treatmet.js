@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default () => {
-  return <div>Hello from TREATMENT</div>
+import Layout from '../components/layout'
+
+const Treatment = () => {
+  return <Layout>Hello from TREATMENT</Layout>
 }
+
+export default Treatment

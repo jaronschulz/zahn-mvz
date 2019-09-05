@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default () => {
-  return <div>hello from CONTACTS</div>
+import Layout from '../components/layout'
+
+const Contact = () => {
+  return <Layout>hello from CONTACTS</Layout>
 }
+
+export default Contact

@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default () => {
-  return <div>Hello from DOCS</div>
+import Layout from '../components/layout'
+
+const Documents = () => {
+  return <Layout>Hello from DOCS</Layout>
 }
+
+export default Documents

@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default () => {
-  return <div>Hello from TEAM</div>
+import Layout from '../components/layout'
+
+const Team = () => {
+  return <Layout>Hello from TEAM</Layout>
 }
+
+export default Team

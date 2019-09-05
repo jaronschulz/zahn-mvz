@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default () => {
-  return <div>Hello from IMPRINT</div>
+import Layout from '../components/layout'
+
+const Imprint = () => {
+  return <Layout>Hello from IMPRINT</Layout>
 }
+
+export default Imprint
