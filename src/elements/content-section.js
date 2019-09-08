@@ -11,6 +11,7 @@ const ContentSection = ({ content, className }) => {
 }
 
 export default styled(ContentSection)`
-  height: calc(100vh - 10rem);
-  background: burlywood;
+  height: 100%;
+  padding: 2rem;
+  background: lightgray;
 `

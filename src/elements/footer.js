@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 
 const Footer = ({ className }) => {
   return (
@@ -10,9 +11,18 @@ const Footer = ({ className }) => {
 }
 
 export default styled(Footer)`
-  width: 100vw;
+  display: flex;
+  align-items: center;
   position: fixed;
   bottom: 0;
+  background: black;
+  width: 100vw;
   height: 4rem;
-  background: red;
+  h1 {
+    margin-left: 2rem;
+    color: white;
+  }
+  ${breakpoint('mobile', 'tablet')`
+  display: none;
+`};
 `

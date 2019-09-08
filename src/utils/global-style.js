@@ -5,7 +5,8 @@ import 'sanitize.css/typography.css'
 
 const GlobalStyle = createGlobalStyle`
 body {
-    background: red;
+    height: calc(100vh - 10rem);
+    
 }
 `
 export default GlobalStyle

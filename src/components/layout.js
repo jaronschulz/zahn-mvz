@@ -1,17 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import GlobalStyle from './global-style'
-import Header from './header'
-import Main from './main'
-import Footer from './footer'
+import { GlobalStyle } from '../utils'
+import { Header, Main, Footer } from '../elements'
 
 const Layout = ({ children, className }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <div className={className}>
       <GlobalStyle />
-      <Header />
-      <Main content={children} />
+      <Header handleClick={() => setMenuOpen(!menuOpen)} />
+      <Main content={children} visible={menuOpen} />
       <Footer />
     </div>
   )
@@ -19,6 +19,7 @@ const Layout = ({ children, className }) => {
 
 export default styled(Layout)`
   height: 100vh;
+  overflow: hidden;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
