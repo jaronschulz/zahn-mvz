@@ -48,6 +48,17 @@ const LinkWrapper = styled(props => <Link {...props} />)`
   h4 {
     font-size: 1.5rem;
   }
+  ${breakpoint('tablet', 'desktop')`
+  justify-content: space-around;
+  width: 100%;
+  i {
+    display: none;
+  }
+  h4 {
+    font-size: 1rem;
+    margin-top: 2.25rem;
+  }
+  `};
 `
 const LinkButton = styled.button`
   outline: solid 2px white;
@@ -63,4 +74,10 @@ const LinkButton = styled.button`
   & :active > * {
     color: firebrick;
   }
+
+  ${breakpoint('tablet', 'desktop')`
+    width: 110%;
+    margin: 0.6rem -0.5rem ;
+    padding: 1.4rem 1rem;
+  `};
 `
