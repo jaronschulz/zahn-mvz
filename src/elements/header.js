@@ -46,6 +46,8 @@ const MenuIcon = styled(Menu)`
   width: 2.7rem;
 `
 
+//TODO: Fix Ipad portait mode ....!!!!!
+
 const MenuButton = styled.button`
   margin-left: 2rem;
   border: none;

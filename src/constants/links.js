@@ -41,6 +41,9 @@ export default [
     path: '/contacts',
     text: 'kontakt',
   },
+]
+
+export const legalLinks = [
   {
     icon: <Imprint />,
     path: '/imprint',

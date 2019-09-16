@@ -30,6 +30,6 @@ export default styled(Main)`
   `};
 
   ${breakpoint('desktop')`
-  grid-template-columns: 1fr 3fr
+  grid-template-columns: 1.5fr 3fr
 `};
 `

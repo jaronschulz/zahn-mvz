@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 import { Link } from 'gatsby'
 
-import links from '../constants/links'
+import links, { legalLinks } from '../constants/links'
 
 const Navigation = ({ className, visible }) => {
   return (
@@ -16,11 +16,22 @@ const Navigation = ({ className, visible }) => {
           </LinkWrapper>
         </LinkButton>
       ))}
+      {legalLinks.map((link, index) => (
+        <LinkButton className="legal">
+          <LinkWrapper key={`legal-${index}`} to={link.path}>
+            <i key={`icon-${index}`}>{link.icon}</i>
+            <h4>{link.text}</h4>
+          </LinkWrapper>
+        </LinkButton>
+      ))}
     </aside>
   )
 }
 
 export default styled(Navigation)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 1rem 2rem;
   background: white;
   height: 100%;
@@ -33,10 +44,6 @@ export default styled(Navigation)`
   ${breakpoint('tablet', 'desktop')`
   width:  ${({ visible }) => (visible ? '100%' : '0')};
   `};
-
-  ${breakpoint('desktop')`
-  
- `};
 `
 const LinkWrapper = styled(props => <Link {...props} />)`
   display: flex;
@@ -46,8 +53,9 @@ const LinkWrapper = styled(props => <Link {...props} />)`
   text-decoration: none;
   color: black;
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
+
   ${breakpoint('tablet', 'desktop')`
   justify-content: space-around;
   width: 100%;
@@ -58,12 +66,18 @@ const LinkWrapper = styled(props => <Link {...props} />)`
     font-size: 1rem;
     margin-top: 2.25rem;
   }
+  
   `};
+  ${breakpoint('desktop')`
+  .legal {
+    display: none;
+  }
+  `}
 `
 const LinkButton = styled.button`
   outline: solid 2px white;
   background: lightgrey;
-  padding: 2rem;
+  padding: 2.2rem;
   width: 100%;
   height: 2rem;
   margin: 0.5rem auto;
@@ -75,9 +89,32 @@ const LinkButton = styled.button`
     color: firebrick;
   }
 
+  ${breakpoint('mobile', 'tablet')`
+  &.legal{
+    background: black;
+    & h4 {
+      color: white;
+    };
+    & i {
+      color: white;
+    };
+  }
+`};
+
   ${breakpoint('tablet', 'desktop')`
     width: 110%;
     margin: 0.6rem -0.5rem ;
-    padding: 1.4rem 1rem;
+    padding: 2rem 1rem;
+    &.legal {
+      display: none;
+    };
   `};
+
+  ${breakpoint('desktop')`
+  padding: 1.8rem;
+  height: 2rem;
+  &.legal {
+    display: none;
+  };
+ `};
 `
